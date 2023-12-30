@@ -1,14 +1,23 @@
 #include <iostream>
-// The following library needs to be included to use std::sort()
-#include <algorithm>
-using namespace std;
 
-int main() {
-  string coffee[] = {"latte", "cappuccino", "americano", "espresso"}; 
-  int size = 4;
-  std::sort(coffee, coffee + size);
-  for (int i = 0; i < 4; i++){
-    cout<<coffee[i]<<endl;
-  }
-  return 0;
+struct myStructure {
+    int pi;
+    int roottwo;
+};
+
+int main(int argc, char const **argv)
+{
+    myStructure structurevariable;
+    myStructure *a = &structurevariable;
+    (*a).pi = 5;
+    std::cout << (*a).pi << std::endl;
+    a->pi = 10;
+    std::cout << a->pi << std::endl;
+
+    myStructure *b = new myStructure;
+    b->roottwo = 4;
+    std::cout << (*b).roottwo << std::endl;
+    delete b;
+
+    return 0;
 }

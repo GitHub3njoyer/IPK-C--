@@ -18,15 +18,20 @@ public:
             }
         }
     }
+
     template <typename T2>
     Matrix (T2 container) {
-        for (int i = 0; i < N; i++)
-        {
-            for (int j = 0; j < M; j++)
-            {
-                mat[i][j] = container[i][j];
+        int x = 0;
+        int y = 0;
+        for (auto row : container) {
+            for (auto element : row) {
+                mat[x][y] = element;
+                y++;
             }
+            x++;
+            y=0;
         }
+
     }
 
     void print()

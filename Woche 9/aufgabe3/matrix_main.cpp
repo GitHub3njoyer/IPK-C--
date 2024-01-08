@@ -53,10 +53,12 @@ int main(int argc, char const *argv[])
     matrix10.print();
     std::cout << "------------------" << std::endl;
 
-    int array1[3][7] = {{2, 2, 2, 2, 2, 2, 2}, {4, 4, 4, 4, 4, 4, 4}, {3, 3, 3, 3, 3, 3, 3}};
+    
+    std::array<std::array<int, 7>, 3> array1 = {{{2, 2, 2, 2, 2, 2, 2}, {4, 4, 4, 4, 4, 4, 4}, {3, 3, 3, 3, 3, 3, 3}}};
     Matrix <int, 3, 7> matrix11(array1);
     matrix11.print();
     std::cout << "------------------" << std::endl;
+    
 
     return 0;
 }
